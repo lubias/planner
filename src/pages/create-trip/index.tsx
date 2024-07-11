@@ -1,4 +1,3 @@
-import { ArrowRight, UserRoundPlus } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { InviteGuestsModal } from "./invite-guests-modal";
@@ -12,7 +11,7 @@ export function CreateTripPage() {
   const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false);
   const [isGuestsModalOpen, setIsGuestsModalOpen] = useState(false);
   const [isConfirmTripModalOpen, setIsConfirmTripModalOpen] = useState(false);
-  const [emailsToInvite, setEmailsToInvite] = useState([]);
+  const [emailsToInvite, setEmailsToInvite] = useState<string[]>([]); // Define o tipo como string[]
 
   function openGuestsInput() {
     setIsGuestsInputOpen(true);
